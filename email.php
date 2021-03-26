@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('America/Sao_Paulo');
+
 
 require_once('src/PHPMailer.php');
 require_once('src/SMTP.php');
@@ -13,6 +13,7 @@ if((isset($_POST['email']) && !empty(trim($_POST['email']))) && (isset($_POST['m
 
 	$nome = !empty($_POST['nome']) ? $_POST['nome'] : 'Não informado';
 	$email = $_POST['email'];
+    $telefone = $_POST['telefone'];
 	$mensagem = $_POST['mensagem'];
 	$data = date('d/m/Y H:i:s');
 
@@ -31,6 +32,7 @@ if((isset($_POST['email']) && !empty(trim($_POST['email']))) && (isset($_POST['m
 	$mail->Subject = $assunto;
 	$mail->Body = "Nome: {$nome}<br>
 				   Email: {$email}<br>
+                   Telefone: {$telefone}<br>
 				   Mensagem: {$mensagem}<br>
 				   Data/hora: {$data}";
 
