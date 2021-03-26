@@ -16,7 +16,7 @@ if (isset($_POST['BTEnvia'])) {
  
  //Configurações do email, ajustar conforme necessidade
  //==================================================== 
- $email_destinatario = "dhyeison,kelvin@gmail.com"; // pode ser qualquer email que receberá as mensagens
+ $email_destinatario = "dhyeison.kelvin@gmail.com"; // pode ser qualquer email que receberá as mensagens
  $email_reply = "$email"; 
  $email_assunto = "Mensagem do Site"; // Este será o assunto da mensagem
  //====================================================
